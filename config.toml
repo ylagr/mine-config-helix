@@ -1,0 +1,61 @@
+theme = "mylove"
+#  helix config.toml
+[keys.normal]
+D = "delete_char_backward"
+A-t = "insert_tab"
+"C-left" = "move_prev_word_start"
+"C-right" = "move_next_word_end"
+
+[keys.normal.z]
+J = "page_down"
+K = "page_up"
+[keys.normal.Z]
+J = "page_down"
+K = "page_up"
+
+[keys.insert]
+A-t = "insert_tab"
+"C-n" = "completion"
+"C-backspace" = "@<A-backspace>"
+"C-del" = "@<A-del>"
+"A-x" = "normal_mode"
+"C-left" = "move_prev_word_start"
+"C-right" = "move_next_word_end"
+
+[editor]
+cursorline = false
+cursorcolumn = true
+# replace all word
+completion-replace = true
+bufferline = "always"
+undercurl = true
+end-of-line-diagnostics = "hint"
+# end-of-line-diagnostics = "error"
+# error warning info hint
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+# if inline work , end-of-line-diagnostics will disable
+#other-lines = "hint"
+prefix-len = 2
+
+[editor.lsp]
+display-progress-messages = true
+display-inlay-hints = true
+
+[editor.statusline]
+right = ["spacer","register","version-control", "diagnostics", "workspace-diagnostics", "selections","primary-selection-length", "position", "position-percentage", "total-line-numbers", "file-encoding", "file-line-ending", "file-type"]
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.whitespace]
+render = "all"
+          
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+

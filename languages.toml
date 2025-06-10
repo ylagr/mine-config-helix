@@ -1,0 +1,8 @@
+[language-server.ctags_ls]
+command = "ctags_ls"
+config = {tags=["tags",".tags"]}
+
+[[language]]
+name = "java"  # Or whatever language you want to use it for
+file-types = ["java"]
+language-servers = [ "ctags_ls" ]
