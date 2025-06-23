@@ -1,4 +1,4 @@
-theme = "mylove"
+# theme = "mylove"
 #  helix config.toml
 [keys.normal]
 D = "delete_char_backward"
