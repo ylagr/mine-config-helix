@@ -1,10 +1,23 @@
 # theme = "mylove"
 #  helix config.toml
+[keys.normal.space]
+x = ":buffer-close"
+X = ":buffer-close!"
 [keys.normal]
 D = "delete_char_backward"
-A-t = "insert_tab"
+# A-t = [
+#           ':insert-output echo -n \u0009'
+# ]
 "C-left" = "move_prev_word_start"
 "C-right" = "move_next_word_end"
+# C-l = [
+#   ':sh rm -f /tmp/unique-file',
+#   ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+#   ':insert-outThe system cannot find the path specified.put echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+#   ':open %sh{cat /tmp/unique-file}',
+#   ':redraw'
+# ]
+
 
 [keys.normal.z]
 J = "page_down"
@@ -14,7 +27,7 @@ J = "page_down"
 K = "page_up"
 
 [keys.insert]
-A-t = "insert_tab"
+# A-t = '@!echo -n "\t"<ret>'
 "C-n" = "completion"
 "C-backspace" = "@<A-backspace>"
 "C-del" = "@<A-del>"
@@ -23,6 +36,7 @@ A-t = "insert_tab"
 "C-right" = "move_next_word_end"
 
 [editor]
+mouse = true
 cursorline = false
 cursorcolumn = true
 # replace all word
@@ -33,6 +47,8 @@ end-of-line-diagnostics = "hint"
 # end-of-line-diagnostics = "error"
 # error warning info hint
 
+[editor.smart-tab]
+enable = false
 [editor.inline-diagnostics]
 cursor-line = "hint"
 # if inline work , end-of-line-diagnostics will disable
